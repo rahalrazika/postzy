@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    @articles = Article.all.by_most_recent
+
   end
+
+  
+
 end
