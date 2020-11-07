@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+ $orange: #FF7F01;
+ body {
+    margin-top:150px;
+
+  }
+a:hover {
+    color: $orange !important;
+    text-decoration: none;
+}
+.text-orange {
+ color: $orange;
+}
+.alert {
+    border-radius: 0;
+  }
+  .alert:not(:last-child) {
+    margin-top: -85px;
+  }
+ 

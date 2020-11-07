@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg  bg-white  fixed-top ">
+    <div class="container">
+      <a class="navbar-brand text-dark ">
+      <%= link_to root_path, class:"navbar-item text-muted" do %>
+          <h1 class="title h5 text-capitalize ">PostZy<span class="text-warning">&#9679;</span></h1>
+        <% end  %>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarResponsive">
+
+        <div class="d-flex align-items-center font-weight-bold text-uppercase ml-5 ">
+        
+          <ul class="navbar-nav d-flex ml-5 mb-2 ">
+         <li>
+            <%= link_to "categorie", '#', class:"navbar-link text-muted  " %>
+         </li>
+        </ul>
+         <ul class="navbar-nav d-flex ml-4 mb-2">
+         <li>
+            <%= link_to "categorie", '#', class:"navbar-link  text-muted " %>
+         </li>
+        </ul>
+         <ul class="navbar-nav d-flex ml-4 mb-2 ">
+         <li>
+            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
+         </li>
+        </ul>
+         <ul class="navbar-nav d-flex ml-4 mb-2 ">
+         <li>
+            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
+         </li>
+        </ul>
+        <ul class="navbar-nav d-flex ml-4 mb-2 ">
+         <li>
+            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
+         </li>
+        </ul>
+        
+        </div>
+         
+        
+        <ul class="navbar-nav ml-auto t text-uppercase align-items-center font-weight-bold">
+           <% if user_signed_in? %>
+                <li>
+                <%= link_to "Create a new ",root_path, class: "navbar-link  p-3 text-muted" %>
+                </li>
+                <ul class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle m-32" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="text-muted p-2">Account<span>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                     <li class="dropdown-item navdrop-link">  
+                        <%= link_to "Edite profile ", edit_user_registration_path, class:"navbar-item" %>
+                         </li> 
+                     <li class="dropdown-item navdrop-link">  
+                        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class:"navbar-link" %>
+                     </li>          
+                  </div>
+                </ul>
+    
+            <% else %>
+               <li>
+              <%= link_to "LOG IN", new_user_session_path, class:"navbar-link  p-3 text-dark text-uppercase " %>
+               </li>
+            <li>
+               <%= link_to "Sign up", new_user_registration_path, class:"navbar-link text-dark text-uppercase"%>         
+            </li>
+        </ul>
+        <%end%>
+      </div>
+    </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

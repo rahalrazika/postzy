@@ -3,7 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 # Added Gems
-gem 'rubocop', '~>0.81.0'
+gem 'rubocop',          '~>0.81.0'
+gem 'bootstrap',        '~> 4.5', '>= 4.5.2'
+gem 'better_errors',    '~> 2.8', '>= 2.8.3'
+gem 'hirb',             '~> 0.7.3'
+gem 'devise',           '~> 4.7', '>= 4.7.2'
+gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
