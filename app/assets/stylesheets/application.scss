@@ -33,4 +33,6 @@ a:hover {
   .alert:not(:last-child) {
     margin-top: -85px;
   }
- 
+ .wrapper {
+    min-height: 100%;
+ }

@@ -17,10 +17,10 @@
     <% if alert %>
     <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-    <div class="row">
+    <div class="container">
     <%= yield %>
     </div>
-  <footer><%= render 'layouts/footer' %> </footer>
+    <%= render 'layouts/footer' %>
 
   </body>
 </html>
