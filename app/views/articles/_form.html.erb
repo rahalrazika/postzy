@@ -1,3 +1,5 @@
+<div class="w-75 mx-auto px-5 text-secondary">
+
 <%= form_with(model: @article, local: true) do |f| %>
 <div class="form-group">
  <%= f.label :title, "Title" %>
@@ -5,13 +7,14 @@
 </div>
 <div class="form-group">
  <%= f.label :content, "Content" %>
- <%= f.text_area :content, class:"form-control"%>
+ <%= f.text_area :content, class:"form-control", rows: "7"%>
 </div>
 
 <div class="form-group">
  <%= f.label :image, "Upload image" %>
  <%= f.file_field :image %>
 </div>
-<%= f.submit "Publish", class:"btn btn-primary" %>
+<%= f.submit "Publish", class:"btn btn-secondary btn-lg btn-block " %>
 
 <%end%>
+</div>

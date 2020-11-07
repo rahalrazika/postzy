@@ -1,4 +1,36 @@
-<% @articles.each do |a|%>
-<%= link_to a.title, article_path(a)%>
-<%= image_tag a.image.url %>
-<%end%>
+<%# @articles.each do |a|%>
+<%#= link_to a.title, article_path(a)%>
+<%#= image_tag a.image.url %>
+<%#end%>
+
+  <div class="section text-center ">
+  <h2>All Articales show</h2>
+<section class="hero-article">
+  <div class="container-fluid">
+  <% @articles.each do |a|%>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <%#= a.user.where(by_most_recent(@article))%>
+        <p><a href="#" class="text-orange">Learn more »</a></p>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</section>
+  <div class="container d-flex w-100">
+      <% @articles.each do |a|%>
+ 
+    <div class="row ">
+              <div class="col-md-6 article-section">
+             <%= image_tag a.image.url, class: "imga" %>
+          
+            <div class="carousel-caption  font-weight-bolder text-white">
+              <%= link_to a.title, article_path(a)%>
+            </div>
+          
+     </div>
+
+     
+ </div>
+  <% end %> 
+</div>

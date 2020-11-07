@@ -1,4 +1,4 @@
-
+  
 <li id="articles-<%= @article.id %>">
 <%= image_tag @article.image.url, class:"img-fluid w-50 h-25" %>
 <span class="Title"> <%= @article.title %>  </span>
@@ -7,5 +7,7 @@
 Posted <%= time_ago_in_words(@article.created_at) %> ago.
 </span>
 </li>
+<% if  user_signed_in? %>
 <%= link_to "Edit", edit_article_path(@article),class:"btn btn-primary" %>
 <%= link_to "Delete",article_path(@article), method: :delete, class:"btn btn-danger" %>
+<%end%>
