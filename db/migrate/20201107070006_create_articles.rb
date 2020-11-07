@@ -3,11 +3,10 @@ class CreateArticles < ActiveRecord::Migration[6.0]
     create_table :articles do |t|
       t.text :title
       t.text :content
-      t.references :user, null: false, foreign_key: true
+      t.references :author, index: true
 
       t.timestamps
     end
-    add_index :articles, [:user_id, :created_at]
+    add_foreign_key :articles, :users, column: :author_id
   end
- 
 end

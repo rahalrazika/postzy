@@ -3,7 +3,4 @@ class HomeController < ApplicationController
     @articles = Article.all.by_most_recent
 
   end
-
-  
-
 end
