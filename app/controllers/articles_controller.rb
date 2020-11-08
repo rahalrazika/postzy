@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, expect: %i[edit update new create]
   def show
     @article = Article.find(params[:id])
   end
@@ -46,6 +47,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :content, :image)
+    params.require(:article).permit(:title, :content, :image, :category_list)
   end
 end

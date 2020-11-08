@@ -1,11 +1,3 @@
 
-<% if  user_signed_in? %>
 <h2 class="text-center font-weight-bold text-orange text-uppercase">New Article</h2>
 <%= render "articles/form" %>
-<%else%>
-<div class="text-center">
-<h1 class="alert alert-danger text-center">HI 👋🏻,You are not Authorized to access here <h1>
-<p>If you are already registered &#128512;<%= link_to "LOG IN", new_user_session_path %></p>
-<p>Or create a new account  &#128151; <%= link_to "Sign up", new_user_registration_path %></p>
-</div>
-<%end%>

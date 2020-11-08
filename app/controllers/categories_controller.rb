@@ -1,18 +1,21 @@
 class CategoriesController < ApplicationController
-  def index 
-     @categories = Category.all
+  before_action :authenticate_user!, expect: %i[edit update new create]
+  before_action :set_category, only: %i[show edit update destroy]
+
+  def index
+    @categories = Category.all
   end
 
-  def show
-    @category = Category.find(params[:id])
-    @articles = @category.articles 
+  def show; end
+
+  def edit; end
+
+  def new
+    @category = Category.new
   end
 
-  def new 
-    @category = Category.new 
-  end
   def create
-    @category = current_user.categorys.build(category_params)
+    @category = Category.new(category_params)
     if @category.save
       flash[:success] = 'your category is created'
       redirect_to category_path(@category)
@@ -23,7 +26,6 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:id])
     if @category.update(category_params)
       flash[:success] = 'your category is  updated '
       redirect_to category_path(@category)
@@ -34,7 +36,6 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    @category = Category.find(params[:id])
     if @category.destroy
       flash[:success] = 'your category is  deleted '
     else
@@ -42,8 +43,14 @@ class CategoriesController < ApplicationController
     end
     redirect_to root_path
   end
+
   private
+
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def set_category
+    @category = Category.find(params[:id])
   end
 end

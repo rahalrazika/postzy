@@ -12,31 +12,14 @@
 
         <div class="d-flex align-items-center font-weight-bold text-uppercase ml-5 ">
         
-          <ul class="navbar-nav d-flex ml-5  ">
+        <ul class="navbar-nav d-flex ml-5 ">
+          <% Category.all.each do |c| %>
          <li>
-            <%= link_to "categorie", '#', class:"navbar-link text-muted  " %>
+            <%= link_to c.name, category_path(c), class:"navbar-link text-muted  p-2  " %>
          </li>
-        </ul>
-         <ul class="navbar-nav d-flex ml-4">
-         <li>
-            <%= link_to "categorie", '#', class:"navbar-link  text-muted " %>
-         </li>
-        </ul>
-         <ul class="navbar-nav d-flex ml-4 ">
-         <li>
-            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
-         </li>
-        </ul>
-         <ul class="navbar-nav d-flex ml-4 ">
-         <li>
-            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
-         </li>
-        </ul>
-        <ul class="navbar-nav d-flex ml-4 ">
-         <li>
-            <%= link_to "categorie", '#', class:"navbar-link text-muted " %>
-         </li>
-        </ul>
+         <%end%>
+    </ul>
+      
         
         </div>
          

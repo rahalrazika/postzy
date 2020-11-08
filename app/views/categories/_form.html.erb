@@ -1,0 +1,12 @@
+<div class="w-75 mx-auto px-5 text-secondary">
+
+<%= form_with(model: @category, local: true) do |f| %>
+<div class="form-group">
+ <%= f.label :name, "name" %>
+ <%= f.text_field :name, class:"form-control"%>
+</div>
+
+<%= f.submit "Submit", class:"btn btn-secondary btn-lg btn-block " %>
+
+<%end%>
+</div>
