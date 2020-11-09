@@ -1,13 +1,22 @@
-  
-<li id="articles-<%= @article.id %>">
-<%= image_tag @article.image.url, class:"img-fluid w-50 h-25" %>
-<span class="Title"> <%= @article.title %>  </span>
-<span class="content"><%= @article.content %></span>
-<span class="timestamp">
-Posted <%= time_ago_in_words(@article.created_at) %> ago.
-</span>
-</li>
+  <div class= "container-fluid m-t">
+
+  <div class=" font-weight-bold text-center h1 text-uppercase ">
+    <%= @article.title %>  
+  </div>
+  <div id="articles-<%= @article.id %>" class="">
+     <div class="ml-5"> 
+     <%= image_tag @article.image.url, class:"w-75 ml-5  h-25" %>
+    </div>
+    <div class="">
+      <span class="content"><%= @article.content %></span>
+         <span class="timestamp">
+           Posted <%= time_ago_in_words(@article.created_at) %> ago.
+      </span>
+      </div>
+</div>
 <% if  user_signed_in? %>
 <%= link_to "Edit", edit_article_path(@article),class:"btn btn-primary" %>
 <%= link_to "Delete",article_path(@article), method: :delete, class:"btn btn-danger" %>
 <%end%>
+</div>
+  <div>

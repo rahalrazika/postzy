@@ -14,15 +14,19 @@
  *= require_self
  */
  @import "bootstrap";
-
- $orange: #FF7F01;
+ $dark: #191919;
+ $orange: #fd6000;
  body {
-    margin-top:150px;
-
+    margin-top: 66px;
+    min-height: 200px;
+    margin-bottom: 50px;
+    clear: both;
+  
   }
 a:hover {
     color: $orange !important;
     text-decoration: none;
+    background-color: transparent;
 }
 .text-orange {
  color: $orange;
@@ -31,26 +35,59 @@ a:hover {
     border-radius: 0;
   }
   .alert:not(:last-child) {
-    margin-top: -85px;
+    margin-top: -20px;
   }
- .wrapper {
-    min-height: 100%;
- }
- .article-section {
-   img {
-     width:14em;
-   }
-
- }
- .article-section {
-   a {
-    color: white;
+  .best-section {
+    width:100%;
+    height:500px;
   }
 
+ .best-section {
+  .img-fit {
+    img {
+      object-fit: cover;
+      width: 19rem;
+       }
+    }
+
+}
+.best-title {
+
+    margin-top: 23rem;
+
+}
+.containe {
+
+  .m-t {
+    margin-left: 20rem;
+   
+  }
 }
 
-.hero-article {
-  width:100%;
-  height:250px;
+.mr-category {
+  margin-left: -5rem !important;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+background-color: $dark;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: $dark;
+  background-color: $orange;
+}
+
+@media (min-width: 992px) {
+ 
+}
