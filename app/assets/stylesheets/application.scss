@@ -13,54 +13,54 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
- $dark: #191919;
- $orange: #fd6000;
- body {
-    margin-top: 66px;
-    min-height: 200px;
-    margin-bottom: 50px;
-    clear: both;
-  
-  }
-a:hover {
-    color: $orange !important;
-    text-decoration: none;
-    background-color: transparent;
-}
-.text-orange {
- color: $orange;
-}
-.alert {
-    border-radius: 0;
-  }
-  .alert:not(:last-child) {
-    margin-top: -20px;
-  }
-  .best-section {
-    width:100%;
-    height:500px;
-  }
+@import "bootstrap";
+$dark: #191919;
+$orange: #fd6000;
 
- .best-section {
+body {
+  margin-top: 66px;
+  min-height: 200px;
+  margin-bottom: 50px;
+  clear: both;
+}
+
+a:hover {
+  color: $orange !important;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.alert {
+  border-radius: 0;
+}
+
+.alert:not(:last-child) {
+  margin-top: -20px;
+}
+
+.best-section {
+  width: 100%;
+  height: 500px;
+
   .img-fit {
     img {
       object-fit: cover;
       width: 19rem;
-       }
     }
-
+  }
 }
+
 .best-title {
-
-    margin-top: 23rem;
-
+  margin-top: 23rem;
 }
-.containe {
 
+.containe {
   .m-t {
     margin-left: 20rem;
-   
   }
 }
 
@@ -73,7 +73,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-background-color: $dark;
+  background-color: $dark;
 }
 
 .fa {
@@ -88,6 +88,4 @@ background-color: $dark;
   background-color: $orange;
 }
 
-@media (min-width: 992px) {
- 
-}
+/* @media (min-width: 992px) {} */
