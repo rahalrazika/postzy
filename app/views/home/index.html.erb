@@ -2,12 +2,15 @@
   <div class="container-fluid ">
     <div class="row ">
       <div class=" card col-lg-12 col-md-12 col-sm-12 col-xs-12 w-75 h-50">
-            <%= image_tag @article.image.url, class:"img-fit" %>
-           <div class="card-img-overlay w-75 best-title">
-               <h3 class="text-orange ml-2"> <%= @article.title %></h3>
-             <P> <%= link_to "This is the best Post ", article_path(@article), class:"text-white ml-2 font-weight-bold "%></P>
-
-            </div>
+  
+         <% @articles.each do |a| %>
+          <% if a.votes.count == @most_voted %>
+           <%= image_tag a.image.url %>
+            <div class="card-img-overlay w-100 d-flex ">
+              <%= a.title %>
+              </div>
+          <%end%>
+         <%end%>
       </div>
     </div>
     </div>
@@ -21,8 +24,8 @@
          <% @articles.limit(4).each do |a|%>
          <div class="card  text-white w-75">
           <%= image_tag a.image.url, class: " w-100 h-100" %>
-          <div class="card-img-overlay w-100 d-flex">
-           <%= link_to a.category_list, article_path(a),class:"font-weight-bold h3 text-white text-uppercase  "%>
+          <div class="card-img-overlay w-100 d-flex ">
+           <%= link_to a.category_list, article_path(a),class:"font-weight-bold h3 text-white text-uppercase p-0 border-bottom  "%>
           <div class="mt-auto mr-category"> <%= link_to a.title, article_path(a), class:"font-weight-bold h5 text-white  "%></div>
 
           </div>

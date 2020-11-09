@@ -3,6 +3,8 @@
   <div class=" font-weight-bold text-center h1 text-uppercase ">
     <%= @article.title %>  
   </div>
+  <%=  voting(@article)  %>
+   <h4> <%= @article.votes.count%><h4>
   <div id="articles-<%= @article.id %>" class="">
      <div class="ml-5"> 
      <%= image_tag @article.image.url, class:"w-75 ml-5  h-25" %>
