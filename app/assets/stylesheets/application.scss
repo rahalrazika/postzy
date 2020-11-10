@@ -29,7 +29,9 @@ body {
   margin-bottom: 50px;
   min-height: 100vh;
   clear: both;
+ 
 }
+
 
 a:hover {
   color: $orange !important;
@@ -46,16 +48,7 @@ a:hover {
 }
 
 .alert:not(:last-child) {
-  margin-top: -20px;
-}
-
-.best-section {
-  .img-fit {
-    img {
-      object-fit: cover;
-      width: 19rem;
-    }
-  }
+  margin-top: -30px;
 }
 
 .mr-category {

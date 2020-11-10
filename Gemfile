@@ -9,7 +9,6 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'hirb', '~> 0.7.3'
 gem 'paperclip', '~> 6.1'
 gem 'rubocop', '~>0.81.0'
-gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
@@ -39,6 +38,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # The RSpec testing
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -52,9 +53,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'factory_bot_rails'
+  gem 'rspec'
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
   gem 'webdrivers'
 end
 
