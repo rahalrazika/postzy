@@ -4,8 +4,8 @@ class Article < ApplicationRecord
   has_many :categories, through: :categoryings
   has_many :votes, dependent: :destroy
   has_attached_file :image, presence: true
-  validates :title, presence: true, length: { in: 3..20 }
-  validates :content, presence: true, length: { maximum: 500 }
+  validates :title, presence: true
+  validates :content, presence: true, length: { maximum: 1000 }
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
   scope :is_most_recent, -> { order(created_at: :desc) }
 

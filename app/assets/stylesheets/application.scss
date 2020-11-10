@@ -16,12 +16,18 @@
 @import "bootstrap";
 $dark: #191919;
 $orange: #fd6000;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin-top: 66px;
-  min-height: 200px;
+  min-width: 100%;
   margin-bottom: 50px;
+  min-height: 100vh;
   clear: both;
+  
 }
 
 a:hover {
@@ -43,9 +49,6 @@ a:hover {
 }
 
 .best-section {
-  width: 100%;
-  height: 500px;
-
   .img-fit {
     img {
       object-fit: cover;
@@ -53,17 +56,6 @@ a:hover {
     }
   }
 }
-
-.best-title {
-  margin-top: 23rem;
-}
-
-.containe {
-  .m-t {
-    margin-left: 20rem;
-  }
-}
-
 .mr-category {
   margin-left: -5rem !important;
 }
@@ -88,4 +80,12 @@ footer {
   background-color: $orange;
 }
 
-/* @media (min-width: 992px) {} */
+
+ @media (max-width: 992px) {
+   body {
+   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
+  max-width: 30%;
+   }
+ } 

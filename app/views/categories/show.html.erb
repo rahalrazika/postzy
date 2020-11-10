@@ -1,7 +1,7 @@
-<div class="containe-fluid ">
+<div class="containe ">
  <div class="row ">
 <% @category.articles.each do |c| %>
-<div class="card w-50 h-25 m-auto ">
+<div class="card w-50 h-25 m-auto p-2">
  <div class="card-title h1 font-wieght-bold text-center text-uppercase border-0 ">
   <%= link_to c.title, article_path(c), class:"text-orange"%>
   </div>
@@ -11,7 +11,7 @@
   <%= image_tag c.image.url, class:"rounded mx-auto d-block w-100" %>
   </div>
   <div class="card-body col-6 ">
-    <p class="card-text"><%= c.content %></p>
+    <p class="card-text"><%= c.content.first(80) %></p>
     <%= link_to "SEE MORE ", article_path(c), class:" card-link small text-orange"%>
   </div>
   </div>
