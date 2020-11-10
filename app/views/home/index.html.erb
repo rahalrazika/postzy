@@ -1,3 +1,5 @@
+ 
+ 
  <section class=" best-section h-100 w-100 container-fluid ">
     <div class="row justify-content-between bg-danger">
       <div class=" card col-lg-12 col-md-12 col-sm-12 col-xs-12 w-75 h-100">
@@ -11,25 +13,24 @@
          <%end%>
       </div>
     </div>
-
+  
     <div class="row justify-content-between">
       <div class="col d-flex h-50">
-         <% @category.limit(4).each do |a|%>
-         <div class="card  text-white w-100 ">
-          <%#= image_tag a.articles.image.url, class: " w-100 h-100" %>
-          <div class="card-img-overlay d-flex ">
-           <%= link_to a.name, article_path(a),class:"font-weight-bold h3  text-uppercase p-0 border-bottom  "%>
-          <div class="mt-auto mr-category"> <%#= link_to a.title, article_path(a), class:"font-weight-bold h5 text-white  "%></div>
-
-          </div>
-
-         </div>
+         <% @categories.each do |c|%>
+         <% @articles.each do |a| %>
+          <% if c.articles.last == a %>
+  
+           <%=  image_tag a.image.url, class: "img-fluid w-25 h-25" %>
+           <%= link_to c.name, category_path(c)%>
+           <%= link_to a.title, article_path(a) %> 
+          <%end%>
         <%end%>
-        
+        <%end%>
       </div>
     </div>
 
 </section>
+
 
 
 

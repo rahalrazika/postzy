@@ -1,9 +1,11 @@
 class Category < ApplicationRecord
   has_many :categoryings, dependent: :destroy
   has_many :articles, through: :categoryings
-  scope :categories_with_articles, -> { find_by(articles: :id) }
+  validates :name, presence: true, length: { in: 3..20 }
 
   def to_s
     name
   end
+
+  
 end
