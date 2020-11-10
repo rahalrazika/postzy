@@ -4,7 +4,7 @@ module ApplicationHelper
     if vote
       link_to('🖤', article_vote_path(id: vote.id, article_id: article.id), method: :delete)
     else
-      link_to('🤍', article_votes_path(article_id: article.id), method: :post )
+      link_to('🤍', article_votes_path(article_id: article.id), method: :post)
     end
   end
 end

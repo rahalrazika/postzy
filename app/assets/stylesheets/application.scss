@@ -16,18 +16,19 @@
 @import "bootstrap";
 $dark: #191919;
 $orange: #fd6000;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   margin-top: 66px;
   min-width: 100%;
   margin-bottom: 50px;
   min-height: 100vh;
   clear: both;
-  
 }
 
 a:hover {
@@ -56,6 +57,7 @@ a:hover {
     }
   }
 }
+
 .mr-category {
   margin-left: -5rem !important;
 }
@@ -80,12 +82,11 @@ footer {
   background-color: $orange;
 }
 
-
- @media (max-width: 992px) {
-   body {
-   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-  margin: 0 auto;
-  max-width: 30%;
-   }
- } 
+@media (max-width: 992px) {
+  body {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    margin: 0 auto;
+    max-width: 30%;
+  }
+}
