@@ -8,8 +8,6 @@ RSpec.describe Article, type: :model do
   it { should respond_to(:author_id) }
   it { should respond_to(:content) }
 
-
-
   describe 'when user is not present' do
     before { @article.author_id = nil }
     it { should_not be_valid }
@@ -32,4 +30,10 @@ RSpec.describe Article, type: :model do
     before { @article.title = ' ' }
     it { should_not be_valid }
   end
+
+  describe 'article associations' do
+    it { should belong_to(:author) }
+    it { should have_many(:categories) }
+    it { should have_many(:votes) }
   end
+end
