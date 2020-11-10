@@ -5,8 +5,7 @@ RSpec.describe User, type: :model do
 
   subject { @user }
 
-    it { should be_valid }
-    it { respond_to have_many(:articles) }
-    it { respond_to have_many(:votes) }
-
+  it { should be_valid }
+  it { respond_to have_many(:articles) }
+  it { respond_to have_many(:votes) }
 end
