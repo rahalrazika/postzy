@@ -14,5 +14,4 @@ RSpec.describe Category, type: :model do
     before { @category.name = 'ar' }
     it { should_not be_valid }
   end
-
 end

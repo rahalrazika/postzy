@@ -29,7 +29,9 @@ body {
   margin-bottom: 50px;
   min-height: 100vh;
   clear: both;
+ 
 }
+
 
 a:hover {
   color: $orange !important;
@@ -45,11 +47,12 @@ a:hover {
   border-radius: 0;
 }
 
-
-
-.mr-category {
-  margin-left: -5rem !important;
+.alert:not(:last-child) {
+  margin-top: -22px;
 }
+
+
+
 
 footer {
   position: fixed;
@@ -71,11 +74,11 @@ footer {
   background-color: $orange;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   body {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    margin: 0 auto;
-    max-width: 30%;
+    min-height: 699px;
+    max-width: 900px;
+   
   }
-}
+  }

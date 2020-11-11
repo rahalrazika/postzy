@@ -1,36 +1,57 @@
  
  
- <section class=" best-section h-100 w-100 container-fluid ">
-    <div class="row justify-content-between bg-danger">
-      <div class=" card col-lg-12 col-md-12 col-sm-12 col-xs-12 w-75 h-100">
+
+    <div class="row container-fluid m-0 ">
+      
          <% @articles.each do |a| %>
+         <div class=" card col-lg-12 col-md-12 col-sm-12 col-xs-12  border-0">
           <% if a.votes.count == @most_voted %>
-           <%= image_tag a.image.url %>
-            <div class="card-img-overlay  m-5 text-white  ">
-              <%= a.title%>
+           <%= image_tag a.image.url ,class:"h-100 w-100"%>
+            <div class="card-img-overlay  text-white d-flex d-flex align-items-end mt-auto h-25  ">
+              <%= link_to a.title, article_path(a),class:"text-white bg-secondary w-50 mt-2 p-3 "%>
               </div>
           <%end%>
+           </div>
          <%end%>
-      </div>
+     
+    </div>
+ 
+   
+
+
+    <div class="row container-fluid m-0 border-0">
+      <div class="col d-flex">
+          <% @categories.each do |c|%>
+              <% @articles.each do |a| %>
+                 <% if c.articles.last == a %>
+                   <div class="card  text-white w-100">
+                     <%=  image_tag a.image.url, class: "img-fluid w-100 h-100" %>
+                       <div class="card-img-overlay w-100">
+                              <div class="font-weight-bold ">
+                                <span class="border-bottom h-25 w-auto border-warning" ><%= link_to c.name, category_path(c), class:"text-white text-uppercase p"%></span>
+                             
+                             </div>
+                             <div class="font-weight-bold d-flex align-items-end mt-4 h-75  small">
+                                <%= link_to a.title, article_path(a),class:"text-white " %> 
+                             </div>
+
+                        </div>
+
+                        </div>
+                   <%end%>
+               <%end%>
+            <%end%>
+       </div>
     </div>
   
-    <div class="row justify-content-between">
-      <div class="col d-flex h-50">
-         <% @categories.each do |c|%>
-         <% @articles.each do |a| %>
-          <% if c.articles.last == a %>
-  
-           <%=  image_tag a.image.url, class: "img-fluid w-25 h-25" %>
-           <%= link_to c.name, category_path(c)%>
-           <%= link_to a.title, article_path(a) %> 
-          <%end%>
-        <%end%>
-        <%end%>
-      </div>
-    </div>
+      
+ 
+      
+          
+    
+       
+      
+     
 
-</section>
-
-
-
+         
 

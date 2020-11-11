@@ -4,10 +4,9 @@ class Article < ApplicationRecord
   has_many :categories, through: :categoryings
   has_many :votes, dependent: :destroy
   has_attached_file :image, presence: true
-  validates :title, presence: true, length: { minimum: 4}
+  validates :title, presence: true, length: { minimum: 4 }
   validates :content, presence: true, length: { maximum: 1000 }
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
-  
 
   def category_list
     categories.collect(&:name).join(', ')

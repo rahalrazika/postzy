@@ -1,32 +1,18 @@
-<div class="containe ">
- <div class="row ">
-<% @category.articles.each do |c| %>
-<div class="card w-50 h-25 m-auto p-2">
- <div class="card-title h1 font-wieght-bold text-center text-uppercase border-0 ">
-  <%= link_to c.title, article_path(c), class:"text-orange"%>
-  </div>
+ <div class="container col-12 ">
+      <div class="row d-flex ">
+             <% @category.articles.each do |c| %>
+         <div class="col-md-3 mb-5">
+            
+               <%= image_tag c.image.url, class:" img-fluid" %>
+         </div>
+    
+        <div class="col-md-3">
 
-  <div class="col-12 d-flex">
-  <div class="col-6">
-  <%= image_tag c.image.url, class:"rounded mx-auto d-block w-100" %>
-  </div>
-  <div class="card-body col-6 ">
-    <p class="card-text"><%= c.content.first(80) %></p>
-    <%= link_to "SEE MORE ", article_path(c), class:" card-link small text-orange"%>
-  </div>
-  </div>
-</div>
-  <%end%>
-  </div>
-</div>
+          <%= link_to c.title, article_path(c), class:"text-orange h2"%>
+          <hr class="w-50">
+          <p>  <%= c.content.first(80) %></p>
+           <%= link_to "SEE MORE ", article_path(c), class:" card-link small text-orange"%>
 
-
-
-
-
-
-
-
-
-
-
+        </div>
+       <%end%>
+      </div>
