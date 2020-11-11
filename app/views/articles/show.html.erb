@@ -21,7 +21,7 @@
               <a href="#" class="fa fa-instagram"></a>
             </span>
             <p class="timestamp text-secondary small">
-                Posted  <%= time_ago_in_words(@article.created_at) %> ago. 
+                Created by <%= current_user.name%>  <%= time_ago_in_words(@article.created_at) %> ago. 
            </p>
           </div>
           <div class="col-6 p-2  ">
