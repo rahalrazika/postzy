@@ -1,0 +1,4 @@
+ <% if   current_user.id == @article.author_id %>
+            <%= link_to "Edit", edit_article_path(@article),class:"btn btn-dark btn-sm ml-5 " %>
+             <%= link_to "Delete",article_path(@article), method: :delete, class:"btn btn-outline-dangerr btn-sm " %>
+<%end%>

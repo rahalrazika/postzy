@@ -29,9 +29,7 @@ body {
   margin-bottom: 50px;
   min-height: 100vh;
   clear: both;
- 
 }
-
 
 a:hover {
   color: $orange !important;
@@ -72,13 +70,15 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  html, body {
-    font-size:20% ;
+  html,
+  body {
+    font-size: 20%;
     min-height: 100%;
     overflow: auto;
   }
+
   .fa {
     font-size: 9px;
     width: 18px;
   }
-  }
+}
