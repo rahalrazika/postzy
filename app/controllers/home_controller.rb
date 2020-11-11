@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @articles = Article.includes(:author).is_most_recent
+    @articles = Article.all.includes(:author).is_most_recent
     @categories = Category.all.is_most_recent.limit(4)
     @array = []
     Article.all.each { |article| @array << article.votes }
