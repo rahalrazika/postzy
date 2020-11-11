@@ -8,7 +8,7 @@
           <% if a.votes.count == @most_voted %>
            <%= image_tag a.image.url ,class:"h-100 w-100"%>
             <div class="card-img-overlay  text-white d-flex d-flex align-items-end mt-auto h-25  ">
-              <%= link_to a.title, article_path(a),class:"text-orange font-weight-bold h3 w-50 ml-5 mt-2 p-3 "%>
+              <%= link_to a.title, article_path(a),class:"text-orange font-weight-bold w-50 ml-5 mt-2 p-3 "%>
               </div>
           <%end%>
            </div>
