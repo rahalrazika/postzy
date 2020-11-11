@@ -51,9 +51,6 @@ a:hover {
   margin-top: -22px;
 }
 
-
-
-
 footer {
   position: fixed;
   bottom: 0;
@@ -75,10 +72,9 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  body {
-    height: 100vh;
-    min-height: 699px;
-    max-width: 900px;
-   
+  html, body {
+    font-size:20% ;
+    height: 100%;
+    overflow: auto;
   }
   }
