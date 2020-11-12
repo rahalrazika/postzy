@@ -16,8 +16,7 @@ Postzy is an online application that allows users to vote and share articles wit
 
 ## Screenshots
 ![Home Page](app/assets/images/homepage.png)
-![Category Page](app/assets/images/cat-show.png)
-![Category Page](app/assets/images/art-show.png)
+
 
 
 
