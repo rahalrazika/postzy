@@ -1,4 +1,4 @@
-  <div class= "container m-auto h-auto ">
+  <div class= "container best-section m-auto h-auto ">
 
     <div class=" font-weight-bold text-center h2 text-uppercase   ">
       <%= @article.title %> 
@@ -7,7 +7,7 @@
     </div>
      <br>
     <div id="articles-<%= @article.id %>" class="image">
-       <%= image_tag @article.image.url, class:"w-75 h-25 rounded mx-auto d-block" %>
+       <%= image_tag @article.image.url, class:"img-fluid rounded mx-auto d-block" %>
     </div>
     <br>
     
@@ -21,7 +21,7 @@
               <a href="#" class="fa fa-instagram"></a>
             </span>
             <p class="timestamp text-secondary small">
-                Created by <%= current_user.name%>  <%= time_ago_in_words(@article.created_at) %> ago. 
+                Created by <%= @article.author.name%>  <%= time_ago_in_words(@article.created_at) %> ago. 
            </p>
           </div>
           <div class="col-6 p-2  ">
