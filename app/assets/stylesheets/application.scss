@@ -98,8 +98,8 @@ footer {
   html,
   body {
     font-size: 20%;
-    min-height: 100%;
-    overflow: auto;
+    min-height: 100vh;
+    overflow: hidden;
   }
 
   .fa {
@@ -114,7 +114,7 @@ footer {
 
     img {
       object-fit: cover;
-      height: 20%;
+      height: 50%;
     }
   }
 
