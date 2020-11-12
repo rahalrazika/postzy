@@ -1,6 +1,6 @@
  <div class="container col-12 show-cate">
       <div class="row d-flex ">
-             <% @category.articles.each do |c| %>
+             <% @category.articles.is_most_recent.each do |c| %>
          <div class="col-md-3 mb-5">
             
                <%= image_tag c.image.url, class:" img-fluid" %>
