@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     resources :votes, only: %i[create destroy]
 
   end
-  resources :categories
+  resources :categories, only:  %i[index show edit update destroy]
   
 end

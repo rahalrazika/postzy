@@ -46,7 +46,13 @@ body {
   height: 20rem;
   }
 }
-
+.article-section {
+  img {
+    object-fit: contain;
+    height: 50%;
+    width: 70%
+    }
+}
 a:hover {
   color: $orange !important;
   text-decoration: none;
