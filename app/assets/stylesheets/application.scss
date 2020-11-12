@@ -40,6 +40,12 @@ body {
 
   }
 }
+.show-cate { 
+  img {
+  object-fit: fill;
+  height: 20rem;
+  }
+}
 
 a:hover {
   color: $orange !important;
@@ -90,5 +96,21 @@ footer {
   .fa {
     font-size: 9px;
     width: 18px;
+  }
+  .best-section {
+    .hv-100 {
+      height: 40vh;
+    }
+    img {
+      object-fit: cover;
+      height: 20%;
+  
+    }
+  }
+  .show-cate { 
+    img {
+    object-fit: cover;
+    width: 50rem;
+    }
   }
 }
