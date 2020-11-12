@@ -5,13 +5,14 @@
   </a>
 
   </p>
-This is my capstone project for the Ruby on Rails module in the Microverse Program.
+This is my capstone project for Ruby on Rails module in the Microverse Program.
 
 Postzy is an online application that allows users to vote and share articles within different fields. This project is based on a lifestyle blog designed by [Nelson Sakwa]. (https://www.behance.net/sakwadesignstudio). Here are the key features that you can utilize with Postzy:
 -	User can create an account.
 - User can log in and log out.
 -	The big image is for the top articles.
 -	A List of all categories.
+- User can vote and unvote articles 
 
 ## Screenshots
 ![Home Page](app/assets/images/homepage.png)
