@@ -29,7 +29,11 @@ body {
   max-height: 500vh;
   clear: both;
 }
-
+.best-section {
+  .hv-100 {
+    height: 50vh;
+  }
+}
 a:hover {
   color: $orange !important;
   text-decoration: none;
