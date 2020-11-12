@@ -34,25 +34,28 @@ body {
   .hv-100 {
     height: 40vh;
   }
+
   img {
     object-fit: cover;
     height: 50%;
+  }
+}
 
-  }
-}
-.show-cate { 
+.show-cate {
   img {
-  object-fit: fill;
-  height: 20rem;
+    object-fit: fill;
+    height: 20rem;
   }
 }
+
 .article-section {
   img {
     object-fit: contain;
     height: 50%;
-    width: 70%
-    }
+    width: 70%;
+  }
 }
+
 a:hover {
   color: $orange !important;
   text-decoration: none;
@@ -103,20 +106,22 @@ footer {
     font-size: 9px;
     width: 18px;
   }
+
   .best-section {
     .hv-100 {
       height: 40vh;
     }
+
     img {
       object-fit: cover;
       height: 20%;
-  
     }
   }
-  .show-cate { 
+
+  .show-cate {
     img {
-    object-fit: cover;
-    width: 50rem;
+      object-fit: cover;
+      width: 50rem;
     }
   }
 }

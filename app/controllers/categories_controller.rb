@@ -17,27 +17,27 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = 'your category is created'
+      flash[:success] = 'category was successfully created'
       redirect_to category_path(@category)
     else
-      flash[:alert] = 'Something wrong!!'
+      flash[:alert] = 'Oups Category was not created!!'
       render 'new'
     end
   end
 
   def update
     if @category.update(category_params)
-      flash[:success] = 'your category is  updated '
+      flash[:success] = ' Category was successfully updated '
       redirect_to category_path(@category)
     else
-      flash[:alert] = 'something wrong!!'
+      flash[:alert] = ' something went  wrong!!'
       render 'edit'
     end
   end
 
   def destroy
     if @category.destroy
-      flash[:success] = 'your category is  deleted '
+      flash[:success] = ' Category was successfully deleted '
     else
       flash[:alert] = 'something wrong!!'
     end

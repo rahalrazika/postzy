@@ -11,10 +11,10 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     if @article.save
-      flash[:success] = 'your Article is created'
+      flash[:success] = ' Article was successfully  created'
       redirect_to article_path(@article)
     else
-      flash[:alert] = 'Something wrong!!'
+      flash[:alert] = 'Oups Article was not created something went wrong!!'
       render 'new'
     end
   end
@@ -26,10 +26,10 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
-      flash[:success] = 'your Article is  updated '
+      flash[:success] = ' Article was successfully updated '
       redirect_to article_path(@article)
     else
-      flash[:alert] = 'something wrong!!'
+      flash[:alert] = 'something went wrong!!'
       render 'edit'
     end
   end
