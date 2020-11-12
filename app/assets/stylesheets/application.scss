@@ -25,16 +25,11 @@ $orange: #fd6000;
 
 body {
   margin-top: 66px;
-  max-width: 100wv;
   margin-bottom: 50px;
   max-height: 500vh;
   clear: both;
 }
-.best-section {
-  max-width: 50wv;
-  max-height: 100hv;
-  
-}
+
 a:hover {
   color: $orange !important;
   text-decoration: none;
