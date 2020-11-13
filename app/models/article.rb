@@ -7,7 +7,9 @@ class Article < ApplicationRecord
   validates :title, presence: true, length: { minimum: 4 }
   validates :content, presence: true, length: { maximum: 1000 }
   validates_attachment_content_type :image, content_type: ['image/jpg', 'image/jpeg', 'image/png']
-
+  validates_attachment_presence :image
+  
+  
   def category_list
     categories.collect(&:name).join(', ')
   end

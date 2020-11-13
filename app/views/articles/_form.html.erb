@@ -15,10 +15,11 @@
 </div>
     
 <div class="form-group">
- <%= f.label :image, "Upload image" %>
- <%= f.file_field :image %>
+ <%= f.file_field :image,style:"display:none;" %>
+ <%= f.label :image, "Upload image",class:"btn btn-outline-warning  btn-lg active"%>
+
 </div>
-<%= f.submit "Publish", class:"btn btn-secondary btn-lg btn-block " %>
+<%= f.submit "Publish", class:"btn btn-secondary btn-lg btn-block  " %>
 
 <%end%>
 </div>
