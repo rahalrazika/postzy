@@ -1,0 +1,41 @@
+  <div class= "container article-section">
+
+    <div class=" font-weight-bold text-center h2 text-uppercase   ">
+      <%= @article.title %> 
+      <br>
+      <div class="border border-warning w-25 m-auto "> </div>
+    </div>
+     <br>
+    <div id="articles-<%= @article.id %>" class="image">
+       <%= image_tag @article.image.url, class:"img-fluid rounded mx-auto d-block" %>
+    </div>
+    <br>
+    
+      <div class="border w-75 m-auto "></div>
+        <div class="row ml-5">
+          <div class="col-6">
+             <span class="d-inline-flex p-2 ml-5 ">
+             <h4> <%= @article.votes.count%><h4><%=  voting(@article)  %>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </span>
+            <p class="timestamp text-secondary small">
+                Created by <%= @article.author.name%>  <%= time_ago_in_words(@article.created_at) %> ago. 
+           </p>
+          </div>
+          <div class="col-6 p-2  ">
+           
+          <%= render 'articles/links'%>
+          
+          </div>
+        </div>
+      </div>
+    
+     <div class="text-center m-auto col-8">
+      <span class=" "><%= @article.content %></span>
+         
+    </div>
+  
+      <br>
+      </div>

@@ -1,5 +1,12 @@
-# frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'home/index'
+  devise_for :users
+  root to: "home#index"
+  resources :articles do 
+    resources :votes, only: %i[create destroy]
+
+  end
+  resources :categories, only: %i[index new show edit update destroy]
+  
 end

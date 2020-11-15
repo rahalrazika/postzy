@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: doeistbpd
+  api_key: '935321127815832'
+  api_secret: _MoH8N_vfSOUY2C1-tYHi1TOlg8
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: doeistbpd
+  api_key: '935321127815832'
+  api_secret: _MoH8N_vfSOUY2C1-tYHi1TOlg8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: doeistbpd
+  api_key: '935321127815832'
+  api_secret: _MoH8N_vfSOUY2C1-tYHi1TOlg8
+  enhance_image_tag: true
+  static_file_support: false

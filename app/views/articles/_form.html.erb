@@ -1,0 +1,25 @@
+<div class="w-75 mx-auto px-5 text-secondary">
+
+<%= form_with(model: @article, local: true) do |f| %>
+<div class="form-group">
+ <%= f.label :title, "Title" %>
+ <%= f.text_field :title, class:"form-control"%>
+</div>
+<div class="form-group">
+ <%= f.label :content, "Content" %>
+ <%= f.text_area :content, class:"form-control", rows: "4"%>
+</div>
+<div class="form-group">
+ <%= f.label :category_list, "Category" %>
+ <%= f.text_area :category_list, class:"form-control" %>
+</div>
+    
+<div class="form-group">
+ <%= f.file_field :image,style:"display:none;" %>
+ <%= f.label :image, "Upload image",class:"btn btn-outline-warning  btn-lg active"%>
+
+</div>
+<%= f.submit "Publish", class:"btn btn-secondary btn-lg btn-block  " %>
+
+<%end%>
+</div>

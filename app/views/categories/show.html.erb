@@ -1,0 +1,18 @@
+ <div class="container col-12 show-cate">
+      <div class="row d-flex ">
+             <% @category.articles.is_most_recent.each do |c| %>
+         <div class="col-md-3 mb-5">
+            
+               <%= image_tag c.image.url, class:" img-fluid" %>
+         </div>
+    
+        <div class="col-md-3">
+
+          <%= link_to c.title, article_path(c), class:"text-orange h2"%>
+          <hr class="w-50">
+          <p>  <%= c.content.first(80) %></p>
+           <%= link_to "SEE MORE ", article_path(c), class:" card-link small text-orange"%>
+
+        </div>
+       <%end%>
+      </div>

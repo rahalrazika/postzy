@@ -3,6 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 # Added Gems
+gem 'better_errors', '~> 2.8', '>= 2.8.3'
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'cloudinary', require: false
+gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'hirb', '~> 0.7.3'
+gem 'paperclip', '~> 6.1'
+gem 'paperclip-cloudinary'
 gem 'rubocop', '~>0.81.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -33,6 +40,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # The RSpec testing
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -46,9 +55,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
+  gem 'capybara'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'factory_bot_rails'
+  gem 'rspec'
+  gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
   gem 'webdrivers'
 end
 
