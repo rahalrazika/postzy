@@ -5,11 +5,11 @@ ruby '2.7.0'
 # Added Gems
 gem 'better_errors', '~> 2.8', '>= 2.8.3'
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'cloudinary', require: false
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'hirb', '~> 0.7.3'
 gem 'paperclip', '~> 6.1'
 gem 'paperclip-cloudinary'
-gem 'cloudinary', require: false
 gem 'rubocop', '~>0.81.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

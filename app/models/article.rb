@@ -3,9 +3,9 @@ class Article < ApplicationRecord
   has_many :categoryings, dependent: :destroy
   has_many :categories, through: :categoryings
   has_many :votes, dependent: :destroy
-  has_attached_file :image, 
-                    :storage => :cloudinary,
-                    :path => ':class/:id/:style/:filename'
+  has_attached_file :image,
+                    storage: :cloudinary,
+                    path: ':class/:id/:style/:filename'
 
   validates :title, presence: true, length: { minimum: 4 }
   validates :content, presence: true, length: { maximum: 1000 }
